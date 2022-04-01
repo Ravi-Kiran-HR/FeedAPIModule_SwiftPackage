@@ -8,7 +8,7 @@
 import Foundation
 
 public struct FeedItem {
-    var id: UUID
-    var description: String
-    var image: URL
+    let id: UUID
+    let description: String
+    let image: URL
 }
