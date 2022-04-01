@@ -7,21 +7,21 @@
 
 import Foundation
 
-class RemoteFeedLoader: FeedLoadable {
+public class RemoteFeedLoader: FeedLoadable {
     let client: HTTPClient
     let url: URL
     
-    init(client: HTTPClient, url: URL) {
+    public init(client: HTTPClient, url: URL) {
         self.client = client
         self.url = url
     }
     
-    enum Error: Swift.Error {
+    public enum Error: Swift.Error {
         case connectivity
         case invalidData
     }
     
-    func load(completion: @escaping (FeedResult) -> Void) {
+    public func load(completion: @escaping (FeedResult) -> Void) {
         client.get(from: url, completion: { response in
             switch response {
             case .success(let(data, response)):

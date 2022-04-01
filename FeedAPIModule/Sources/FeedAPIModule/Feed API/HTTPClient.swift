@@ -7,8 +7,8 @@
 
 import Foundation
 
-typealias APIResult = Result<(Data, HTTPURLResponse), Error>
+public typealias APIResult = Result<(Data, HTTPURLResponse), Error>
 
-protocol HTTPClient {
+public protocol HTTPClient {
     func get(from url: URL, completion: @escaping(APIResult) -> Void)
 }
