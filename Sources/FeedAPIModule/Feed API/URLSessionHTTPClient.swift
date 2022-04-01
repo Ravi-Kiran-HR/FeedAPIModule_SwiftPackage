@@ -7,14 +7,14 @@
 
 import Foundation
 
-class URLSessionHTTPClient: HTTPClient {
+public class URLSessionHTTPClient: HTTPClient {
     let session: URLSession
     
-    init (session: URLSession = URLSession.shared) {
+    public init (session: URLSession = URLSession.shared) {
         self.session = session
     }
     
-    func get(from url: URL, completion: @escaping (APIResult) -> Void) {
+    public func get(from url: URL, completion: @escaping (APIResult) -> Void) {
         session.dataTask(with: url) { data, response, errro in
             if let errro = errro {
                 completion(.failure(errro))
