@@ -8,13 +8,13 @@
 import Foundation
 
 public struct FeedItem {
-    public let id: UUID
-    public let description: String
-    public let image: URL
+    public let id: Int
+    public let userId: Int
+    public let title: String
     
-    public init(id: UUID, description: String, image: URL) {
+    internal init(id: Int, userId: Int, title: String) {
         self.id = id
-        self.description = description
-        self.image = image
+        self.userId = userId
+        self.title = title
     }
 }
