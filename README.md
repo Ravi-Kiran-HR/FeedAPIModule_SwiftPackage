@@ -1,3 +1,3 @@
 # FeedAPIModule
 
-A description of this package.
+Swift module which downloads some sample posts from 'https://jsonplaceholder.typicode.com/' and decodes it.
